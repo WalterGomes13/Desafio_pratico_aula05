@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var wind = []
+        var unix = []
+        var linux = []
+        var net = []
+        var mac = []
+        var outro = []
+        let c1, c2, c3, c4, c5, c6 = 0
+        let contador = 0
+        
+        while(contador !=1){
+            var pergunta = parseInt(prompt("\n\
+        1- Windows Server \n\
+        2- Unix \n\
+        3- Linux \n\
+        4- Netware \n\
+        5- Mac OS \n\
+        6- Outro "))
+
+            switch(pergunta){
+                case 1:
+                    c1+=1;
+                    wind.push(c1);
+                    break;
+                case 2:
+                    c2+=1;
+                    unix.push(c2);
+                    break;
+                case 3:
+                    c3+=1;
+                    linux.push(c3);
+                    break;
+                case 4:
+                    c4+=1;
+                    net.push(c4);
+                    break;
+                case 5:
+                    c5+=1;
+                    mac.push(c5);
+                    break;
+                case 6:
+                    c6+=1;
+                    outro.push(c6);
+                    break;
+                case 0:
+                    contador = 1;
+                    break;
+                default:
+                    alert("Opção inválida");
+                    break;
+            }
+        }
+        var soma = (wind.length+unix.length+linux.length+net.length+mac.length+outro.length)
+
+        console.log(`Sistema Operacional Votos %
+------------------- ----- ---
+Windows Server ${wind.length} ${(wind.length/soma)*100}%
+Unix ${unix.length} ${(unix.length/soma)*100}%
+Linux ${linux.length} ${(linux.length/soma)*100}%
+Netware ${net.length} ${(net.length/soma)*100}%
+Mac OS ${mac.length} ${(mac.length/soma)*100}%
+Outro ${outro.length} ${(outro.length/soma)*100}%
+------------------- ----- Total : ${soma}`)
+    </script>
+</body>
+</html>
